@@ -18,7 +18,7 @@ let num2 = prompt('dame num2') //"7"
 let resultado= num1 + num2
 alert("el rersultado de tu suma es " + resultado)
 
-//TRABAJO//
+/* //TRABAJO//
 // Pedir los valores al usuario
 let a =Number( prompt("Ingresa el número A:"));
 let b =Number(prompt("Ingresa el número B:"));
@@ -43,6 +43,9 @@ console.log("B =", b);
 console.log("Suma =", suma);
 console.log("Resta =", resta);
 console.log("Multiplicación =", multiplicación);
-console.log("División =", división);
+console.log("División =", división); */
+
+//
+console.log(`Tu numero es ${numA}`)
 
 
