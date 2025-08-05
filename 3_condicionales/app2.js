@@ -1,12 +1,12 @@
 //Ejercicio 1
 // Pedimos el nombre del usuario
-let nombre = prompt("¿Cuál es tu nombre?");
+let nombre = prompt("¿Cuál es tu nombre?").toLowerCase().trim()
 
 // Pedimos la edad del usuario y la convertimos a número
 let edad = Number(prompt("¿Cuántos años tienes?"));
 
 // Verificamos si el nombre es "mario" o "carlos" (sin importar mayúsculas)
-if (nombre.toLowerCase() === "mario" || nombre.toLowerCase() === "carlos") {
+if (nombre === "mario" || nombre === "carlos") {
   // Si se llama Mario o Carlos, puede entrar a zona VIP
   alert("Bienvenido a la zona VIP");
 
@@ -21,8 +21,11 @@ if (nombre.toLowerCase() === "mario" || nombre.toLowerCase() === "carlos") {
 
 
  //Ejercicio 2
+ // Pedimos el nombre del usuario
+let nombre1 = prompt("¿Cuál es tu nombre?").toLowerCase().trim()
+
  // Pedimos la estatura en cm
-let estatura = Number(prompt("¿Cuál es tu estatura en cm?"));
+let estatura = Number(prompt("¿Cuál es tu estatura en cm?"))
 
 // Pedimos la velocidad en segundos (100 km planos)
 let velocidad = Number(prompt("¿Cuál es tu velocidad en hora para 100 km?"));
