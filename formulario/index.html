@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+ <div class="login">
+   <form id="customForm">
+    <h2>Formulario</h2>
+    
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <br>
+    
+    <label for="color">Color</label>
+    <select id="color" name="color" required>
+      <option value="">-- Selecciona un color --</option>
+      <option value="Red">Rojo</option>
+      <option value="Blue">Azul</option>
+      <option value="Green">Verde</option>
+      <option value="yellow">Amarillo</option>   
+      <option value="pink">Rosado</option>
+      <option value="black">Negro</option>
+      <option value="white">Blanco</option>
+        
+    </select>
+            
+<br>
+     
+    <label>Equipo</label>
+    <div class="radios">
+      <label><input type="radio" name="equipo" value="Gatos" required> Gatos</label>
+      <label><input type="radio" name="equipo" value="Mapaches"> Mapaches</label>
+      <label><input type="radio" name="equipo" value="Perros"> Perros</label>
+    </div>
+    
+    <button type="submit">Enviar</button> 
+    
+    <div id="resultado"></div>
+  </form>
+ </div>
+
+<br>
+
+<div class="userPage">
+  <img class="img-equipo" src="" alt="mapaches">
+<h1 class="text-saludo">Hola Usuario</h1>
+<p>perteneces al equipo <span class="text-equipo">Mapaches</span>
+</p>
+<button id="btnCerrarSesion" class="btn-cerrar">Cerrar sesión</button>
+
+</div>
+
+<script src="app8.js "></script>
+</body>
+</html>
