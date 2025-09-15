@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Galeria 1</title>
+	<style>
+		#galeria{
+			width: 400px;
+			height: 400px;
+			overflow: hidden;
+		}
+
+		#contenedor{
+			width: 2020px;
+			height: 300px;
+			display: flex;
+			transition: margin-left 0.5s ease;
+		}
+	</style>
+</head>
+<body>
+
+<p id="titulo">Primera Imagen</p>
+<div id="galeria">
+	<div id="contenedor">
+		<img src="img1.jpg" width="400" height="300">
+		<img src="img2.jpg" width="400" height="300">
+		<img src="img3.jpg" width="400" height="300">
+		<img src="img4.jpg" width="400" height="300">
+		<img src="img5.jpg" width="400" height="300">
+	</div>
+</div>
+
+<br><br>
+<button id="btn-prev">Anterior</button>
+<button id="btn-next">Siguiente</button>
+
+<script src="./app.js"></script>
+
+</body>
+</html>
