@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Reducción</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #003366;
+    }
+    input, button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .resultado {
+      margin-top: 15px;
+      padding: 15px;
+      background: #e6f0ff;
+      border: 1px solid #99bbff;
+      border-radius: 8px;
+      min-width: 250px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔢 Calculadora de Reducción</h1>
+  <p>Ingresa una fracción (ej: 24/36):</p>
+  <input type="text" id="fraccion" placeholder="Ejemplo: 24/36">
+  <button onclick="reducir()">Reducir</button>
+
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    function mcd(a, b) {
+      return b === 0 ? a : mcd(b, a % b);
+    }
+
+    function reducir() {
+      const input = document.getElementById('fraccion').value.trim();
+      if (!input.includes("/")) {
+        document.getElementById('resultado').innerHTML = "⚠️ Debes escribir una fracción con /";
+        return;
+      }
+
+      let [num, den] = input.split("/").map(Number);
+
+      if (isNaN(num) || isNaN(den) || den === 0) {
+        document.getElementById('resultado').innerHTML = "⚠️ Fracción no válida";
+        return;
+      }
+
+      let divisor = mcd(Math.abs(num), Math.abs(den));
+      let numRed = num / divisor;
+      let denRed = den / divisor;
+
+      document.getElementById('resultado').innerHTML = 
+        `Fracción reducida: <b>${numRed}/${denRed}</b>`;
+    }
+  </script>
+</body>
+</html>
+
